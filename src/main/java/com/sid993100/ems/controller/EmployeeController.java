@@ -20,4 +20,10 @@ public class EmployeeController {
         EmployeeDto savedEmployee = employeeService.createEmployee(employeeDto);
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
+
+//    get emplyee by id
+    public ResponseEntity<EmployeeDto> getEmployeeById(Long emplyeeId){
+        EmployeeDto employeeDto = employeeService.getEmployeeById(emplyeeId);
+        return ResponseEntity.ok(employeeDto);
+    }
 }
